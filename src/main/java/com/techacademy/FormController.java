@@ -16,8 +16,8 @@ public class FormController {
     }
 
     @PostMapping("/confirm")
-    public String postForm(@RequestParam("val") String val, Model model) {
-  //public String postForm(@RequestParam(name = "val", required = false) String val, Model model) {
+  //public String postForm(@RequestParam("val") String val, Model model) {
+    public String postForm(@RequestParam(name = "val", required = false) String val, Model model) {
         // フォームから送信されてきた値をModelに登録
         model.addAttribute("val", val);
         // confirm.htmlに画面遷移
